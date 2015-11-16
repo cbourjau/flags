@@ -19,9 +19,10 @@ class Treemap:
         """create a tree map from tree, using itermethod(node) to walk tree,
         size_method(node) to get object size."""
 
-        self.fig, self.ax = plt.subplots()
         im = plt.imread(profile_pic)
-        self.ax.imshow(im, aspect='auto', zorder=0)
+        figsize = (10, 10)#(im.shape[0], im.shape[1])
+        self.fig, self.ax = plt.subplots(figsize=figsize)
+        self.ax.imshow(im, zorder=0)
         self.ax.axis('off')
         pylab.subplots_adjust(left=0, right=1, top=1, bottom=0)
         self.ax.set_xticks([])
@@ -94,6 +95,7 @@ cas = {
     'libya': [2465, 'images/Flag_of_Libya.svg.png'],
     'yemen': [5720, 'images/Flag_of_Yemen.svg.png'],
     'france': [150, 'images/Flag_of_France.svg.png'],
+    'ukraine': [3112, 'images/Flag_of_Ukraine.svg.png'],
 }
 
 
@@ -104,4 +106,5 @@ if __name__ == '__main__':
         quit()
     tree = make_tree(cas)
     Treemap(tree, iter_method, size, sys.argv[1])
+    print "Total casualties in 2015: ", size(tree)
     plt.show()

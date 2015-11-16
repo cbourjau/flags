@@ -8,3 +8,8 @@ The algorithem is inspired by: http://scipy-cookbook.readthedocs.org/items/Matpl
 Usage:
 
     $ python flags.py profile.jpg
+
+Example:
+
+![profile](profile.png)
+
