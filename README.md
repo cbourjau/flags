@@ -13,3 +13,6 @@ Example:
 
 ![profile](profile.png)
 
+Disclaimer:
+
+I got lazy at some point and included only 14 conflicts plus France. Take this with a pound of salt!
